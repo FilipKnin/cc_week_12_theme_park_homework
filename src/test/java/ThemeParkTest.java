@@ -8,9 +8,11 @@ public class ThemeParkTest {
     ThemePark themePark;
     Attraction attraction;
     Stall stall;
+    Visitor visitor;
 
     @Before
     public void before() {
+        visitor = new Visitor(18,200,240.00);
         attraction = new Dodgems("Dodgems");
         stall = new TobaccoStall("name", "ownerName");
         themePark = new ThemePark();
@@ -36,6 +38,12 @@ public class ThemeParkTest {
     public void canAddAttraction() {
         themePark.addAttraction(attraction);
         assertEquals(1, themePark.countAttractions());
+    }
+
+    @Test
+    public void hasVisit() {
+        themePark.addAttraction(attraction);
+        assertEquals("Visitor has visited Dodgems", themePark.visit(visitor, attraction));
     }
 
 

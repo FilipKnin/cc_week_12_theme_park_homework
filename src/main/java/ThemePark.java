@@ -25,4 +25,8 @@ public class ThemePark {
     public void addAttraction(Attraction attraction) {
         this.attractions.add(attraction);
     }
+
+    public String visit(Visitor visitor, Attraction attraction) {
+        return "Visitor has visited " + attraction.getName();
+    }
 }
