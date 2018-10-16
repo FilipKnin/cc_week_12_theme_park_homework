@@ -1,15 +1,17 @@
 import java.util.ArrayList;
 
-public abstract class Stall {
+public abstract class Stall implements IReviewed{
 
     private String name;
     private String ownerName;
     private ArrayList<String> parkingSpot;
+    private int rating;
 
     public Stall(String name, String ownerName) {
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = new ArrayList<>();
+        this.rating = 0;
     }
 
     public String getName() {
@@ -24,5 +26,8 @@ public abstract class Stall {
         return this.parkingSpot.size();
     }
 
-
+    @Override
+    public int getRating() {
+        return this.rating;
+    }
 }
