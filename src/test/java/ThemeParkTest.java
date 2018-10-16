@@ -27,11 +27,21 @@ public class ThemeParkTest {
     public void countStalls() {
         assertEquals(0, themePark.countStalls());
     }
+    @Test
+    public void countReviews() {
+        assertEquals(0, themePark.countReviews());
+    }
 
     @Test
     public void canAddStall() {
         themePark.addStall(stall);
         assertEquals(1, themePark.countStalls());
+    }
+
+    @Test
+    public void canAddReview() {
+        themePark.addReview(attraction);
+        assertEquals(1, themePark.countReviews());
     }
 
     @Test
@@ -44,6 +54,13 @@ public class ThemeParkTest {
     public void hasVisit() {
         themePark.addAttraction(attraction);
         assertEquals("Visitor has visited Dodgems", themePark.visit(visitor, attraction));
+    }
+
+    @Test
+    public void canGetAllReviewed() {
+        themePark.addAttraction(attraction);
+        themePark.getAllReviewed();
+        assertEquals(1, themePark.countReviews());
     }
 
 
