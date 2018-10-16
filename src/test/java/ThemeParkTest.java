@@ -21,8 +21,21 @@ public class ThemeParkTest {
         assertEquals(0, themePark.countAttractions());
     }
 
+    @Test
     public void countStalls() {
         assertEquals(0, themePark.countStalls());
+    }
+
+    @Test
+    public void canAddStall() {
+        themePark.addStall(stall);
+        assertEquals(1, themePark.countStalls());
+    }
+
+    @Test
+    public void canAddAttraction() {
+        themePark.addAttraction(attraction);
+        assertEquals(1, themePark.countAttractions());
     }
 
 
