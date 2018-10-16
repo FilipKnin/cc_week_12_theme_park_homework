@@ -32,12 +32,12 @@ public class TobaccoStallTest {
     }
 
     @Test
-    public void hasIsAllowed() {
+    public void hasIsAllowedFalse() {
         assertEquals(false, tobaccoStall.isAllowedTo(visitor1));
     }
 
     @Test
-    public void hasIsAllowedFalse() {
+    public void hasIsAllowedTrue(){
         assertEquals(true, tobaccoStall.isAllowedTo(visitor2));
     }
 }
