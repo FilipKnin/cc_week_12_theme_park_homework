@@ -23,4 +23,6 @@ public abstract class Stall {
     public int countParkingSpots() {
         return this.parkingSpot.size();
     }
+
+
 }
