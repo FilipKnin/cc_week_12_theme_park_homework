@@ -20,7 +20,7 @@ public abstract class Stall {
         return this.ownerName;
     }
 
-    public ArrayList<String> getParkingSpot() {
-        return this.parkingSpot;
+    public int countParkingSpots() {
+        return this.parkingSpot.size();
     }
 }
