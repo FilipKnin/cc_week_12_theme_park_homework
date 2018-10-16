@@ -10,4 +10,6 @@ public abstract class Attraction {
     public String getName() {
         return this.name;
     }
+
+
 }
